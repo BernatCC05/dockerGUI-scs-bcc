@@ -3,4 +3,4 @@
 ## Comandes per crear la imatge
 
 #/bin/bash
-docker build -t ubuntu24_gui_vnc .
+docker build -t docker-gui-scs-bcc .
