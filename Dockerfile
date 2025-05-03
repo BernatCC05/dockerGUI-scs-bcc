@@ -2,6 +2,7 @@ FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Instal·lar XFCE, VNC, Python, SSH, curl, wget
 RUN apt update && apt install -y \
     xfce4 xfce4-goodies tightvncserver \
     python3 python3-pip \
@@ -10,7 +11,7 @@ RUN apt update && apt install -y \
     && apt clean
 
 # Instal·lar VSCode
-RUN curl -fsSL https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64 -o vscode.deb \
+RUN wget -O vscode.deb https://update.code.visualstudio.com/latest/linux-deb-x64/stable \
     && apt install -y ./vscode.deb \
     && rm vscode.deb
 
