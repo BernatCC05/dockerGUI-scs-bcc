@@ -1,7 +1,7 @@
 # Base: Ubuntu 24.04
 FROM ubuntu:24.04
 
-# Actualitzem el sistema i instal·lem paquets bàsics
+# Actualitzem el sistema i instal·lem paquets bàsics.
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     xfce4 xfce4-goodies tightvncserver \
